@@ -31,9 +31,6 @@ func shellcode_to_uuids(shellcode []byte) ([]string, error) {
 	for i := 0; i < len(shellcode); i += 16 {
 		var uuidBytes []byte
 
-		// This seems unecessary or overcomplicated way to do this
-
-		// Add first 4 bytes
 		buf := make([]byte, 4)
 		binary.LittleEndian.PutUint32(buf, binary.BigEndian.Uint32(shellcode[i:i+4]))
 		uuidBytes = append(uuidBytes, buf...)
