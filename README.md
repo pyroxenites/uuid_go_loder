@@ -8,3 +8,5 @@ go build -ldflags "-w -s -H windowsgui" GO_UUID.go
 
 生成32位,需要改变Go env
 set GOARCH=386
+
+补充Csharp_loader方式
